@@ -1,6 +1,10 @@
 <h1>Lists#show</h1>
 <%= @list.name %>
-<%= cl_image_tag @list.thumbnail.key, height: 300, width: 400, crop: :fill %>
+<% if @list.thumbnail.present? %>
+  <%= cl_image_tag @list.thumbnail.key, height: 120, width: 120, crop: :fill %>
+<% else %>
+  <img src="https://res.cloudinary.com/pko-sch/image/upload/v1660914946/development/mo91twsrs9j0iq27tcgj0jh8m7vq.jpg" alt="" width="300" height="300">
+<% end %>
 <br>
 <%= link_to 'Back to All lists', lists_path %>
 
