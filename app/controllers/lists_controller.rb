@@ -9,6 +9,7 @@ class ListsController < ApplicationController
   end
 
   def new
+    # Cloudinary::Utils.api_sign_request(params_to_sign, api_secret)
     @list = List.new
   end
 
