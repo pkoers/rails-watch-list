@@ -1,5 +1,6 @@
 <h1>Lists#show</h1>
 <%= @list.name %>
+<%= cl_image_tag @list.thumbnail.key, height: 300, width: 400, crop: :fill %>
 <br>
 <%= link_to 'Back to All lists', lists_path %>
 
